@@ -10,8 +10,6 @@
 <body ng-app="pack-web">
   <div ui-view></div>
 
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
   <!-- angular stuff -->
   <script src="lib/angular/angular.js" type="text/javascript"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -21,11 +19,15 @@
   <!-- main module -->
   <script src="main.js"></script>
   <!-- services -->
-  <script src="services/auth/fb.service.js" type="text/javascript"></script>
-  <script src="services/auth/auth.service.js" type="text/javascript"></script>
-  <!-- landing module -->
-  <script src="landing/landing.ctrl.js"></script>
-  <script src="landing/landing.conf.js"/></script>
+  <script src="components/services/auth/fb.service.js" type="text/javascript"></script>
+  <script src="components/services/auth/auth.service.js" type="text/javascript"></script>
+  <script src="components/services/user.service.js" type="text/javascript"></script>
+  <!-- landing component -->
+  <script src="components/landing/landing.ctrl.js"></script>
+  <script src="components/landing/landing.conf.js"/></script>
+  <!-- signup component -->
+  <script src="components/signup/signup.ctrl.js"></script>
+  <script src="components/signup/signup.conf.js"/></script>
   <!-- fb root -->
   <div id="fb-root"></div>
 </body>
