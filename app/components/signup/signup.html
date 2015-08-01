@@ -1,0 +1,36 @@
+<div>
+  {{signup.title}}
+  <form name="signupForm">
+    <md-input-container flex>
+      <label>username</label>
+      <input required name="username" ng-model="signup.user.username">
+      <div ng-messages="signupForm.username.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container flex>
+      <label>email</label>
+      <input required name="email" ng-model="signup.user.email">
+      <div ng-messages="signupForm.email.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container flex>
+      <label>password</label>
+      <input required type="password" name="pass" ng-model="signup.user.pass">
+      <div ng-messages="signupForm.pass.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container flex>
+      <label>password confirmation</label>
+      <input required type="password"
+        name="passConfirmation"
+        ng-model="signup.user.passConfirmation">
+      <div ng-messages="signupForm.passConfirmation.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-button class="md-raised md-primary" ng-click="signup.signUp()">Sign up</md-button>
+  </form>
+</div>
